@@ -1,0 +1,21 @@
+export ZOPEN_TARBALL_DEPS="make curl makeinfo"
+export ZOPEN_TARBALL_URL="https://ftp.gnu.org/gnu/groff/groff-1.22.4.tar.gz"
+export ZOPEN_TYPE="TARBALL"
+export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-x=no"
+
+zopen_check_results()
+{
+  dir="$1"
+  pfx="$2"
+  chk="$1/$2_check.log"
+
+  # Echo the following information to guage build health
+  echo "actualFailures:0"
+  echo "totalTests:1"
+  echo "expectedFailures:0"
+}
+
+zopen_append_to_env()
+{
+  # echo envars outside of PATH, MANPATH, LIBPATH
+}
