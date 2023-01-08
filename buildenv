@@ -4,18 +4,29 @@ export ZOPEN_TYPE="TARBALL"
 export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-x=no"
 export ZOPEN_EXTRA_CFLAGS='-U_MI_BUILTIN'
 export ZOPEN_EXTRA_CXXFLAGS='-U_MI_BUILTIN'
-export ZOPEN_CHECK="skip"
 
 zopen_check_results()
 {
+#============================================================================
+#Testsuite summary for GNU Troff 1.22.4
+#============================================================================
+# TOTAL: 2
+# PASS:  1
+# SKIP:  1
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
   dir="$1"
   pfx="$2"
   chk="$1/$2_check.log"
 
-  # Echo the following information to guage build health
-  echo "actualFailures:0"
-  echo "totalTests:1"
-  echo "expectedFailures:0"
+  totalTests=$(grep '# TOTAL:' $chk | awk '{ print $3 }')
+  actualFailures=$(grep '# FAIL:' $chk | awk '{ print $3 }')
+  expectedFailures=0
+  echo "actualFailures:${actualFailures}"
+  echo "totalTests:${totalTests}"
+  echo "expectedFailures:${expectedFailures}"
 }
 
 zopen_append_to_env()
