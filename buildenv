@@ -3,6 +3,12 @@ export ZOPEN_TARBALL_URL="https://ftp.gnu.org/gnu/groff/groff-1.22.4.tar.gz"
 export ZOPEN_TYPE="TARBALL"
 export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-x=no"
 
+#
+# Ensure that generated code does not use an absolute path for PERL
+#
+export PERL="/bin/env perl"
+export BASH_PROG="/bin/env bash"
+
 zopen_check_results()
 {
 #============================================================================
@@ -29,5 +35,8 @@ zopen_check_results()
 
 zopen_append_to_env()
 {
-  # echo envars outside of PATH, MANPATH, LIBPATH
+cat <<EOF
+  export GROFF_FONT_PATH="\${PWD}/share/groff/site-font:\${PWD}/share/groff/1.22.4/font:/usr/lib/font"
+  export GROFF_BIN_PATH="\${PWD}/bin"
+EOF
 }
