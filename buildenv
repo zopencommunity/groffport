@@ -7,7 +7,11 @@ export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-x=no"
 # Ensure that generated code does not use an absolute path for PERL
 #
 export PERL="/bin/env perl"
-export BASH_PROG="/bin/env bash"
+
+#
+# For now, do not export BASH_PROG - this causes our one passing test to fail...
+#
+#export BASH_PROG="/bin/env bash"
 
 zopen_check_results()
 {
