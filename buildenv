@@ -1,17 +1,13 @@
-export ZOPEN_TARBALL_DEPS="make curl makeinfo perl m4 zoslib diffutils"
+export ZOPEN_TARBALL_DEPS="make curl makeinfo perl m4 zoslib diffutils sed coreutils"
 export ZOPEN_TARBALL_URL="https://ftp.gnu.org/gnu/groff/groff-1.22.4.tar.gz"
 export ZOPEN_TYPE="TARBALL"
 export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-x=no"
 
 #
-# Ensure that generated code does not use an absolute path for PERL
+# Ensure that generated code does not use an absolute path for PERL or BASH
 #
 export PERL="/bin/env perl"
-
-#
-# For now, do not export BASH_PROG - this causes our one passing test to fail...
-#
-#export BASH_PROG="/bin/env bash"
+export BASH_PROG="/bin/sh"
 
 zopen_check_results()
 {
