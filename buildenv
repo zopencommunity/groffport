@@ -39,5 +39,6 @@ cat <<EOF
   export GROFF_FONT_PATH="\${PWD}/share/groff/site-font:\${PWD}/share/groff/1.22.4/font:/usr/lib/font"
   export GROFF_TMAC_PATH="\${PWD}/share/groff/1.22.4/tmac"
   export GROFF_BIN_PATH="\${PWD}/bin"
+  export GROFF_TYPESETTER=utf8
 EOF
 }
