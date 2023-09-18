@@ -42,3 +42,13 @@ cat <<EOF
   export GROFF_TYPESETTER=utf8
 EOF
 }
+
+zopen_append_to_zoslib_env() {
+cat <<EOF
+GROFF_FONT_PATH|set|PROJECT_ROOT/share/groff/1.22.4/font:/usr/lib/font
+GROFF_FONT_PATH|prepend|PROJECT_ROOT/share/groff/site-font
+GROFF_TMAC_PATH|set|PROJECT_ROOT/share/groff/1.22.4/tmac
+GROFF_BIN_PATH|set|PROJECT_ROOT/bin
+GROFF_TYPESETTER|set|utf8
+EOF
+}
