@@ -1,6 +1,6 @@
-export ZOPEN_TARBALL_DEPS="make curl texinfo perl m4 zoslib diffutils sed coreutils"
-export ZOPEN_TARBALL_URL="https://ftp.gnu.org/gnu/groff/groff-1.22.4.tar.gz"
-export ZOPEN_TYPE="TARBALL"
+export ZOPEN_STABLE_DEPS="make curl texinfo perl m4 zoslib diffutils sed coreutils"
+export ZOPEN_STABLE_URL="https://ftp.gnu.org/gnu/groff/groff-1.22.4.tar.gz"
+export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-x=no"
 export ZOPEN_COMP="CLANG"
 
@@ -51,4 +51,9 @@ GROFF_TMAC_PATH|set|PROJECT_ROOT/share/groff/1.22.4/tmac
 GROFF_BIN_PATH|set|PROJECT_ROOT/bin
 GROFF_TYPESETTER|set|utf8
 EOF
+}
+
+zopen_get_version()
+{
+  ./groff --version | head -1 | awk '{print $4; }'
 }
