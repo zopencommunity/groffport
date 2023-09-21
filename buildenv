@@ -10,6 +10,8 @@ export ZOPEN_COMP="CLANG"
 export PERL="/bin/env perl"
 export BASH_PROG="/bin/sh"
 
+# may need runtime dependencies for perl?
+
 zopen_check_results()
 {
 #============================================================================
