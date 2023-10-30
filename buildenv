@@ -1,5 +1,8 @@
+# bump: groff-version /GROFF_VERSION="(.*)"/ https://ftp.gnu.org/gnu/groff/|re:/href="groff-([\d.]+).tar.gz"/$1/|semver:*
+GROFF_VERSION="1.22.4"
+
 export ZOPEN_STABLE_DEPS="make curl texinfo perl m4 zoslib diffutils sed coreutils"
-export ZOPEN_STABLE_URL="https://ftp.gnu.org/gnu/groff/groff-1.22.4.tar.gz"
+export ZOPEN_STABLE_URL="https://ftp.gnu.org/gnu/groff/groff-${GROFF_VERSION}.tar.gz"
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-x=no"
 export ZOPEN_COMP="CLANG"
@@ -39,8 +42,8 @@ zopen_check_results()
 zopen_append_to_env()
 {
 cat <<EOF
-  export GROFF_FONT_PATH="\${PWD}/share/groff/site-font:\${PWD}/share/groff/1.22.4/font:/usr/lib/font"
-  export GROFF_TMAC_PATH="\${PWD}/share/groff/1.22.4/tmac"
+  export GROFF_FONT_PATH="\${PWD}/share/groff/site-font:\${PWD}/share/groff/${GROFF_VERSION}/font:/usr/lib/font"
+  export GROFF_TMAC_PATH="\${PWD}/share/groff/${GROFF_VERSION}/tmac"
   export GROFF_BIN_PATH="\${PWD}/bin"
   export GROFF_TYPESETTER=utf8
 EOF
@@ -48,8 +51,8 @@ EOF
 
 zopen_append_to_zoslib_env() {
 cat <<EOF
-GROFF_FONT_PATH|set|PROJECT_ROOT/share/groff/site-font:PROJECT_ROOT/share/groff/1.22.4/font:/usr/lib/font
-GROFF_TMAC_PATH|set|PROJECT_ROOT/share/groff/1.22.4/tmac
+GROFF_FONT_PATH|set|PROJECT_ROOT/share/groff/site-font:PROJECT_ROOT/share/groff/${GROFF_VERSION}/font:/usr/lib/font
+GROFF_TMAC_PATH|set|PROJECT_ROOT/share/groff/${GROFF_VERSION}/tmac
 GROFF_BIN_PATH|set|PROJECT_ROOT/bin
 GROFF_TYPESETTER|set|utf8
 EOF
