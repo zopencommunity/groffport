@@ -1,5 +1,5 @@
 # bump: groff-version /GROFF_VERSION="(.*)"/ https://ftp.gnu.org/gnu/groff/|re:/href="groff-([\d.]+).tar.gz"/$1/|semver:*
-GROFF_VERSION="1.22.4"
+GROFF_VERSION="1.23.0"
 
 export ZOPEN_STABLE_DEPS="make curl texinfo perl m4 zoslib diffutils sed coreutils"
 export ZOPEN_STABLE_URL="https://ftp.gnu.org/gnu/groff/groff-${GROFF_VERSION}.tar.gz"
