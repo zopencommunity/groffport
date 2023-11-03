@@ -1,9 +1,9 @@
 diff --git a/makevarescape.sed b/makevarescape.sed
-index 8ece3e8..6a358d8 100644
+index 2baa50c..ba882bd 100644
 --- a/makevarescape.sed
 +++ b/makevarescape.sed
 @@ -6,4 +6,3 @@ s/-/\\\\&/g
- s/\^/\\\\(ha/g
- s/`/\\\\(ga/g
- s/~/\\\\(ti/g
--s|[^ ]/\+|&\\\\:|g
+ s/\^/\\\\[ha]/g
+ s/`/\\\\[ga]/g
+ s/~/\\\\[ti]/g
+-s|[^ ]/\+|&\\\\:\\\\%|g
