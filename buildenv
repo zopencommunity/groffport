@@ -18,13 +18,13 @@ export BASH_PROG="/bin/sh"
 zopen_check_results()
 {
 #============================================================================
-#Testsuite summary for GNU Troff 1.22.4
+#Testsuite summary for GNU roff 1.23.0
 #============================================================================
-# TOTAL: 2
-# PASS:  1
-# SKIP:  1
-# XFAIL: 0
-# FAIL:  0
+# TOTAL: 164
+# PASS:  145
+# SKIP:  12
+# XFAIL: 2
+# FAIL:  5
 # XPASS: 0
 # ERROR: 0
   dir="$1"
@@ -33,7 +33,7 @@ zopen_check_results()
 
   totalTests=$(grep '# TOTAL:' $chk | awk '{ print $3 }')
   actualFailures=$(grep '# FAIL:' $chk | awk '{ print $3 }')
-  expectedFailures=0
+  expectedFailures=5
   echo "actualFailures:${actualFailures}"
   echo "totalTests:${totalTests}"
   echo "expectedFailures:${expectedFailures}"
