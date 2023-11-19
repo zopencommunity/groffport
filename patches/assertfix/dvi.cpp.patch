@@ -1,0 +1,13 @@
+diff --git a/src/devices/grodvi/dvi.cpp b/src/devices/grodvi/dvi.cpp
+index f9e8a57..ce3bc22 100644
+--- a/src/devices/grodvi/dvi.cpp
++++ b/src/devices/grodvi/dvi.cpp
+@@ -15,7 +15,7 @@ for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+-
++#include "config.h"
+ #include <assert.h>
+ 
+ #include "driver.h"

@@ -1,0 +1,13 @@
+diff --git a/src/libs/libdriver/printer.cpp b/src/libs/libdriver/printer.cpp
+index f89b2e9..b18c8cf 100644
+--- a/src/libs/libdriver/printer.cpp
++++ b/src/libs/libdriver/printer.cpp
+@@ -16,7 +16,7 @@
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+-
++#include "config.h"
+ #include <assert.h>
+ 
+ #include "driver.h"

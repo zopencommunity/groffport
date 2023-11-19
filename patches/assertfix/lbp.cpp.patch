@@ -1,0 +1,12 @@
+diff --git a/src/devices/grolbp/lbp.cpp b/src/devices/grolbp/lbp.cpp
+index 35cd54e..de6665d 100644
+--- a/src/devices/grolbp/lbp.cpp
++++ b/src/devices/grolbp/lbp.cpp
+@@ -23,6 +23,7 @@ TODO
+  - Add X command to include bitmaps
+ */
+ 
++#include "config.h"
+ #include <assert.h>
+ 
+ #include "driver.h"

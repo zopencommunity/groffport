@@ -1,0 +1,12 @@
+diff --git a/src/preproc/eqn/delim.cpp b/src/preproc/eqn/delim.cpp
+index 01557c5..9e81f89 100644
+--- a/src/preproc/eqn/delim.cpp
++++ b/src/preproc/eqn/delim.cpp
+@@ -16,6 +16,7 @@ for more details.
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+ 
++#include "config.h"
+ #include <assert.h>
+ 
+ #include "eqn.h"
