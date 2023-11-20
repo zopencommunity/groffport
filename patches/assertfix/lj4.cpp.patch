@@ -1,0 +1,13 @@
+diff --git a/src/devices/grolj4/lj4.cpp b/src/devices/grolj4/lj4.cpp
+index a429a7d..21bd344 100644
+--- a/src/devices/grolj4/lj4.cpp
++++ b/src/devices/grolj4/lj4.cpp
+@@ -29,7 +29,7 @@ X command to insert contents of file
+ X command to specify inline escape sequence (how to specify unprintable chars?)
+ X command to include bitmap graphics
+ */
+-
++#include "config.h"
+ #include <assert.h>
+ 
+ #include "driver.h"

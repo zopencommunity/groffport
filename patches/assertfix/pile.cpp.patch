@@ -1,0 +1,12 @@
+diff --git a/src/preproc/eqn/pile.cpp b/src/preproc/eqn/pile.cpp
+index fcc2e92..55341a6 100644
+--- a/src/preproc/eqn/pile.cpp
++++ b/src/preproc/eqn/pile.cpp
+@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+ 
+ // piles and matrices
+ 
++#include "config.h"
+ #include <assert.h>
+ 
+ #include "eqn.h"
