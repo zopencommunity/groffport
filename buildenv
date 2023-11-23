@@ -3,7 +3,7 @@ GROFF_VERSION="1.23.0"
 
 export ZOPEN_STABLE_DEPS="make curl texinfo perl m4 zoslib diffutils sed coreutils"
 export ZOPEN_STABLE_URL="https://ftp.gnu.org/gnu/groff/groff-${GROFF_VERSION}.tar.gz"
-export ZOPEN_DEV_DEPS="make curl texinfo perl m4 zoslib diffutils sed coreutils autoconf automake pkgconfig libtool bison flex"
+export ZOPEN_DEV_DEPS="make curl texinfo perl m4 zoslib diffutils sed coreutils autoconf automake pkgconfig libtool bison flex netpbm"
 export ZOPEN_DEV_URL="git://git.savannah.gnu.org/groff.git"
 export ZOPEN_BUILD_LINE="${GROFF_BUILD_LINE:-STABLE}"
 export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-x=no"
