@@ -4,7 +4,7 @@ node('linux')
   stage ('Poll') {
                // Poll from upstream:
                checkout([
-                      $class: 'GitSCM',: 'GitSCM',
+                      $class: 'GitSCM': 'GitSCM',
                        branches: [[name: '*/master']],
                        doGenerateSubmoduleConfigurations: false,
                        extensions: [],
