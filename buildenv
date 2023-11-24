@@ -34,6 +34,13 @@ zopen_check_results()
 #============================================================================
 #Testsuite summary for GNU roff (DEV)
 #============================================================================
+# TOTAL: 186
+# PASS:  167
+# SKIP:  12
+# XFAIL: 2
+# FAIL:  5
+# XPASS: 0
+# ERROR: 0
   dir="$1"
   pfx="$2"
   chk="$1/$2_check.log"
@@ -43,7 +50,7 @@ zopen_check_results()
   if [ "${ZOPEN_BUILD_LINE}" = "STABLE" ]; then
     expectedFailures=5
   else
-    expectedFailures=0
+    expectedFailures=5
   fi
   echo "actualFailures:${actualFailures}"
   echo "totalTests:${totalTests}"

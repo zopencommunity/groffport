@@ -1,0 +1,17 @@
+diff --git a/src/preproc/eqn/main.cpp b/src/preproc/eqn/main.cpp
+index a14ac3632..c7b321f9c 100644
+--- a/src/preproc/eqn/main.cpp
++++ b/src/preproc/eqn/main.cpp
+@@ -427,7 +427,11 @@ int main(int argc, char **argv)
+   init_table(device);
+   init_char_table();
+   init_param_table();
+-  std::atexit(free_param_table);
++#ifdef __MVS__
++  atexit(free_param_table);
++#else
++	std::atexit(free_param_table);
++#endif
+   printf(".do if !dEQ .ds EQ\n"
+ 	 ".do if !dEN .ds EN\n");
+   if (output_format == troff) {

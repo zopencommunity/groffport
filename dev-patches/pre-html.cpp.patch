@@ -1,0 +1,24 @@
+diff --git a/.gitignore b/.gitignore
+index 2c749f1aa..3786ce62d 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,3 +1,4 @@
++/build-aux
+ # artifacts expected in a clean tree
+ /.version
+ /Makefile.in
+diff --git a/src/preproc/html/pre-html.cpp b/src/preproc/html/pre-html.cpp
+index 69288ea9f..21efe7244 100644
+--- a/src/preproc/html/pre-html.cpp
++++ b/src/preproc/html/pre-html.cpp
+@@ -60,6 +60,10 @@
+ 
+ #include "nonposix.h"
+ 
++#ifdef __MVS__
++# include <cstdlib>
++#endif
++
+ #if 0
+ # define DEBUGGING
+ #endif
